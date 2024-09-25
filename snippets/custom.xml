@@ -9,6 +9,14 @@
            fetch="https://gitlab.com/PixelOS-AOSP"
            revision="refs/heads/fourteen" />
 
+  <remote  name="PixelOS-Fork"
+           fetch="https://github.com/PixelOS-ForkEdition"
+           revision="refs/heads/fourteen" />
+
+  <remote  name="PixelOS-Fork-Gitlab"
+           fetch="https://gitlab.com/pixelos-ForkEdition"
+           revision="refs/heads/fourteen" />
+
   <!-- Rootdir -->
   <project path="bionic" name="bionic" groups="pdk" remote="PixelOS" />
   <project path="art" name="art" groups="pdk" remote="PixelOS" />
@@ -37,15 +45,15 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="PixelOS" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="PixelOS" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="PixelOS" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="PixelOS-Fork" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="PixelOS-Fork" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="PixelOS" />
 
   <!-- Hardware -->
   <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" groups="generic_fs,pixel" remote="PixelOS" />
 
   <!-- Packages -->
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="PixelOS" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="PixelOS-Fork" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="PixelOS" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="PixelOS" />
 
@@ -60,13 +68,13 @@
   <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="PixelOS" />
 
   <!-- Packages -->
-  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="PixelOS" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="PixelOS-Fork" />
   <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="PixelOS" />
   <project path="packages/apps/Updates" name="packages_apps_Updates" remote="PixelOS" />
 
   <!-- Vendor -->
-  <project path="vendor/aosp" name="vendor_aosp" remote="PixelOS" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="PixelOS-Fork" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="PixelOS" />
-  <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="PixelOS-Gitlab" />
+  <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="PixelOS-Fork-Gitlab" />
 
 </manifest>
